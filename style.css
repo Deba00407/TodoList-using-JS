@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: max-content;
+    max-width: 300px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    justify-content: center;
+    row-gap: 5px;
+    align-items: center;
+    font-size: 25px;
+}
+textarea{
+    resize: none;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    outline: none;
+    width: 90%;
+    color: white;
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 3px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+}
+textarea:focus{
+    border: 1px solid #87A2FF;
+}
+button{
+    padding: 3px;
+    border-radius: 3px;
+    border: 1px;
+    cursor: pointer;
+    color: white;
+}
+#addBtn{
+    background-color: #6256CA;
+}
+#clearBtn {
+    background-color: #FF6B6B;
+}
+.deleteTask {
+    background-color: #800000;
+}
+
+
+#todoList {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 1fr;
+    gap: 3px;
+    width: 100%;
+    padding: 5px 0px;
+    font-size: 12px;
+}
+
+#todoList li {
+    display: contents;
+}
+
+#todoList li input {
+    grid-column: 1 / 2;
+    max-height: 12px;
+    max-width: 12px;
+}
+
+#todoList li span {
+    grid-column: 2 / 3;
+}
+
+#todoList li button {
+    grid-column: 3 / 4;
+    height: 20px;
+    align-self: center;
+}
+.completed{
+    text-decoration: line-through;
+    color: #4CAF50;
+}
